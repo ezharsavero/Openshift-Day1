@@ -1,0 +1,36 @@
+$TTL    604800
+@       IN      SOA     helper.examples. admin.examples. (
+                  1     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800     ; Negative Cache TTL
+)
+
+; name servers - NS records
+    IN      NS      helper
+
+; name servers - A records
+helper.example.          IN      A       10.101.100.122
+
+; OpenShift Container Platform Cluster - A records
+bootstrap.ocp-prod.example.          IN      A       10.101.100.122
+bastion.ocp-prod.example.          	 IN      A       10.101.100.122
+master-1.ocp-prod.example.           IN      A       10.101.100.122
+master-2.ocp-prod.example.           IN      A       10.101.100.122
+master-3.ocp-prod.example.           IN      A       10.101.100.122
+worker-1.ocp-prod.example.           IN      A       10.101.100.122
+worker-2.ocp-prod.example.           IN      A       10.101.100.122
+worker-3.ocp-prod.example.           IN      A       10.101.100.122
+worker-4.ocp-prod.example.           IN      A       10.101.100.122
+infra-1.ocp-prod.example.            IN      A       10.101.100.122
+infra-2.ocp-prod.example.            IN      A       10.101.100.122
+infra-3.ocp-prod.example.            IN      A       10.101.100.122
+router-1.ocp-prod.example.           IN      A       10.101.100.122
+router-2.ocp-prod.example.           IN      A       10.101.100.122
+router-3.ocp-prod.example.           IN      A       10.101.100.122
+
+; OpenShift internal cluster IPs - A records
+api.ocp-prod.example.              IN      A       10.101.100.122
+api-int.ocp-prod.example.          IN      A       10.101.100.122
+*.apps.ocp-prod.example.           IN      A       10.101.100.122
